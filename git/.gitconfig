@@ -1,0 +1,31 @@
+[user]
+	name = weineel
+	email = LiJF_wn@163.com
+[core]
+	excludesfile = /Users/weineel/.gitignore_global
+	autocrlf = input
+	editor = /usr/local/bin/vim 
+[commit]
+    template = /Users/weineel/.git_template/conventional-changelog-template.txt
+[alias]
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+[diff]
+        tool = bcomp
+[difftool "bcomp"]
+        cmd = \"/usr/local/bin/bcomp\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+        prompt = false
+[merge]
+        tool = bcomp
+[mergetool]
+        prompt = false
+	keepBackup = false
+[mergetool "bcomp"]
+        cmd = \"/usr/local/bin/bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
