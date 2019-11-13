@@ -64,7 +64,7 @@ ZSH_THEME="weineel"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # delete thefuck
-plugins=(git git-flow gitignore git-extras docker autojump copydir copyfile zsh-autosuggestions history)
+plugins=(git git-flow gitignore git-extras docker autojump copydir copyfile zsh-autosuggestions history weineel)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -153,6 +153,7 @@ export LC_ALL="zh_CN.UTF-8"
 ####
 alias pc='proxychains4'
 alias proxyee-down='/Users/weineel/Applications/proxyee-down-2.54/start'
+alias ls='exa'
 
 # 修改终端代理
 alias proxy='export socks5_proxy=socks5://127.0.0.1:1086;export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
@@ -177,3 +178,7 @@ export PATH="$PATH:/Users/weineel/flutter/sdk/v1.7.8/flutter/bin"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+source "$(navi widget zsh)"
+

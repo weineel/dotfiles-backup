@@ -4,7 +4,8 @@
 [core]
 	excludesfile = /Users/weineel/.gitignore_global
 	autocrlf = input
-	editor = /usr/local/bin/vim 
+	editor = /usr/bin/vim
+
 [commit]
     template = /Users/weineel/.git_template/conventional-changelog-template.txt
 [alias]

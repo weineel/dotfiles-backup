@@ -1,6 +1,9 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+"
+" 插件管理器 Vim-plug
+"
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -35,4 +38,6 @@ Plug '~/my-prototype-plugin'
 
 " Initialize plugin system
 call plug#end()
+
+set number
 
