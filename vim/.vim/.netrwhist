@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/Users/weineel/.vim'
+let g:netrw_dirhist_1='/Users/weineel/.oh-my-zsh/custom/plugins/weineel'
+let g:netrw_dirhist_0='/Users/weineel/project/fork/vue-next'
+let g:netrw_dirhist_9='/Users/weineel/.oh-my-zsh/custom/plugins/weineel'
+let g:netrw_dirhist_8='/Users/weineel/.oh-my-zsh/custom/plugins'
+let g:netrw_dirhist_7='/Users/weineel/.oh-my-zsh/custom'
+let g:netrw_dirhist_6='/Users/weineel/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
+let g:netrw_dirhist_5='/Users/weineel/project/patsnap/huayi-web'
+let g:netrw_dirhist_4='/Users/weineel/project/patsnap/huayi-web/build'
+let g:netrw_dirhist_3='/Users/weineel/project/patsnap/huayi-web/build/utils'
+let g:netrw_dirhist_2='/Users/weineel/project/patsnap/huayi-web/build'

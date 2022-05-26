@@ -1,9 +1,3 @@
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# nvm 淘宝镜像
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-
 # Add RVM to PATH for scripting
 # export PATH="$PATH:$HOME/.rvm/bin"
 # Load RVM into a shell session *as a function*
@@ -64,7 +58,7 @@ ZSH_THEME="weineel"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # delete thefuck
-plugins=(git git-flow gitignore git-extras docker autojump copydir copyfile zsh-autosuggestions history weineel)
+plugins=(git gitignore git-extras docker autojump zsh-autosuggestions history weineel)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,7 +146,7 @@ export LC_ALL="zh_CN.UTF-8"
 # 别名
 ####
 alias pc='proxychains4'
-alias proxyee-down='/Users/weineel/Applications/proxyee-down-2.54/start'
+# alias proxyee-down='/Users/weineel/Applications/proxyee-down-2.54/start'
 alias ls='exa'
 
 # 修改终端代理
@@ -171,14 +165,36 @@ alias am='typescript-sprint add-module'
 alias ac='typescript-sprint add-module -c'
 
 # flutter
-export PATH="$PATH:/Users/weineel/flutter/sdk/v1.7.8/flutter/bin"
+# export PATH="$PATH:/Users/weineel/flutter/sdk/v1.7.8/flutter/bin"
 
 # dart package manager(pub) 清华大学镜像源
 # export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub/"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# nvm 淘宝镜像
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# source "$(navi widget zsh)"
 
-source "$(navi widget zsh)"
+# pipenv
+eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+export PIPENV_VENV_IN_PROJECT=1
+
+# brew 中科大镜像
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+
+
+# test
+# alias innoe-lane='python /Users/weineel/project/patsnap/innoe/innoe-lane/src/cli.py'
+
+# TMUX 自动启动
+# if which tmux >/dev/null 2>&1; then
+#     #if not inside a tmux session, and if no session is started, start a new session
+#     test -z "$TMUX" && (tmux attach || tmux)
+# fi
 

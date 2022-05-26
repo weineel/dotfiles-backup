@@ -4,10 +4,10 @@
 [core]
 	excludesfile = /Users/weineel/.gitignore_global
 	autocrlf = input
-	editor = /usr/bin/vim
+	editor = code --wait
 
 [commit]
-    template = /Users/weineel/.git_template/conventional-changelog-template.txt
+	template = /Users/weineel/.git_template/conventional-changelog-template.txt
 [alias]
     mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [diff]
@@ -25,8 +25,13 @@
         cmd = \"/usr/local/bin/bcomp\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
-	path = -ro
+	cmd = " "
+	path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	cmd = " "
 	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
